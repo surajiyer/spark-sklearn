@@ -26,8 +26,8 @@ This package is available on PYPI:
 This project is also available as as [Spark package](http://spark-packages.org/package/databricks/spark-sklearn).
 
 The developer version has the following requirements:
- - a recent release of scikit-learn. Releases 0.18.1, 0.19.0 have been tested, older versions may work too.
- - Spark >= 2.1.1. Spark may be downloaded from the [Spark official website](http://spark.apache.org/). In order to use this package, you need to use the pyspark interpreter or another Spark-compliant python interpreter. See the [Spark guide](https://spark.apache.org/docs/latest/programming-guide.html#overview) for more details.
+ - scikit-learn 0.19.1 has been tested.
+ - Spark >= 2.1.0. Spark may be downloaded from the [Spark official website](http://spark.apache.org/). In order to use this package, you need to use the pyspark interpreter or another Spark-compliant python interpreter. See the [Spark guide](https://spark.apache.org/docs/latest/programming-guide.html#overview) for more details.
  - [nose](https://nose.readthedocs.org) (testing dependency only)
  - Pandas, if using the Pandas integration or testing. Pandas==0.18 has been tested.
 
@@ -72,3 +72,6 @@ build the docs yourself, see the instructions in [docs/README.md](https://github
    1. The official Spark target is Spark >= 2.1
 - 2017-09-29 Minor release (0.2.3):
    1. Fixes spark-package build of spark-sklearn.
+- 2018-01-19 Minor release (0.2.3):
+   1. Updated grid_search to support scikit-learn==0.19 which includes many bug fixes over older scikit versions
+   2. Added support for distributing calculation of learning curve and validation curve over spark.
